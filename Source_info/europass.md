@@ -6,6 +6,7 @@
 - **Fecha de nacimiento:** 22/02/2003
 - **Nacionalidad:** Española
 - **Teléfono móvil:** (+34) 628988114
+- **Teléfono móvil (UK):** +44 5673 224450
 - **Correo electrónico:** marti.ferran@icloud.com
 - **Dirección:** 08720, Vilafranca del Penedès, España (Domicilio)
 
