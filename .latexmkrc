@@ -1,7 +1,5 @@
-# Auxiliary files stay in build/. The PDF and its SyncTeX file are copied
-# to the project root so double-click in the PDF can jump back to the source.
-$out_dir = 'build';
+# pdflatex writes into build/. latexmk then moves the PDF and SyncTeX
+# file to the project root and leaves the auxiliary files in build/.
 $aux_dir = 'build';
-$emulate_aux = 0;
-$out2_dir = '.';
-@out2_exts = ('pdf', 'synctex.gz');
+$out_dir = '';
+$emulate_aux = 1;
