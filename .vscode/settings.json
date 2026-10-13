@@ -1,5 +1,5 @@
 {
-  "latex-workshop.latex.outDir": "%DIR%/build",
+  "latex-workshop.latex.outDir": ".",
   "latex-workshop.latex.auxDir": "%DIR%/build",
   "latex-workshop.latex.recipe.default": "latexmk",
   "latex-workshop.latex.tools": [
@@ -11,18 +11,6 @@
         "-interaction=nonstopmode",
         "-file-line-error",
         "-pdf",
-        "-outdir=%DIR%/build",
-        "%DOC%"
-      ]
-    },
-    {
-      "name": "pdflatex",
-      "command": "pdflatex",
-      "args": [
-        "-synctex=1",
-        "-interaction=nonstopmode",
-        "-file-line-error",
-        "-output-directory=%DIR%/build",
         "%DOC%"
       ]
     }
@@ -31,10 +19,6 @@
     {
       "name": "latexmk",
       "tools": ["latexmk"]
-    },
-    {
-      "name": "pdflatex",
-      "tools": ["pdflatex"]
     }
   ]
 }

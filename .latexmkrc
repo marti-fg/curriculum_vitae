@@ -1,6 +1,6 @@
-# Keep every generated file in build/, including when LaTeX Workshop
-# does not pass -outdir. Overrides the home latexmkrc, which copies
-# the PDF and SyncTeX file back to the project root.
+# Auxiliary files stay in build/. Only the PDF is copied to the project root.
 $out_dir = 'build';
 $aux_dir = 'build';
 $emulate_aux = 0;
+$out2_dir = '.';
+@out2_exts = ('pdf');
