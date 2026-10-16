@@ -2,6 +2,10 @@
 \documentclass[a4paper,11pt]{article}
 \input{preamble}
 
+% Role context under a \resumeSubheading. The heading table is top-aligned and
+% pulls the next line up, so the blurb must start a new paragraph below it.
+\newcommand{\resumeIntro}[1]{\par\vspace{3pt}{\small #1\par}}
+
 \begin{document}
 
 \begin{center}
@@ -12,126 +16,108 @@
     \href{https://www.linkedin.com/in/mart\%C3\%AD-ferran-gonzales-080348229}{\underline{linkedin.com/in/martí-ferran-gonzales}}
 \end{center}
 
+\section{Personal Statement}
+{\small Aerospace and Autonomous Systems Engineer specialising in Guidance, Navigation \& Control (GNC), flight dynamics, and real-time embedded systems. Experienced in developing closed-loop control algorithms, state estimation, and embedded software (C/C++, MATLAB/Simulink) validated through mathematical modelling, simulation, and dynamic testing on prototype platforms. Combines analytical work with a hands-on, collaborative approach to testing within multidisciplinary teams.}
+
+\section{Key Achievements}
+  \resumeItemListStart
+    \resumeItem{Awarded Honours Distinction in Airport Design and Construction for achieving the highest grade in the module during the MSc in Aeronautical Engineering (Universitat Politècnica de Catalunya, 2026).}
+    \resumeItem{Refactored the complete Vehicle Control Unit (VCU) software architecture in Simulink, optimising model execution, task scheduling, and communication reliability (CUPRA Racing, 2026).}
+    \resumeItem{Built a complete multi-physics vehicle simulation model and developed a closed-loop yaw control algorithm, calibrating and verifying the system during prototype on-circuit testing (CUPRA Racing, 2025).}
+    \resumeItem{Coordinated the concept phase for the 2025 prototype vehicle, synthesising multidisciplinary ideas and aligning team efforts to converge on optimal vehicle targets (UPC ecoRacing, 2024).}
+  \resumeItemListEnd
+
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {Cranfield University}{Cranfield, United Kingdom}
-      {MSc in Autonomous Vehicle Dynamics and Control}{Sep. 2026 -- Present}
+      {MSc in Autonomous Vehicle Dynamics and Control}{Sep 2026 -- Present}
+      {Cranfield University (Cranfield, UK)}{}
       \resumeItemListStart
-        \resumeItem{Sensor fusion and state estimation; guidance, navigation and path planning; classical, state-space and robust control; UAS modelling and flight dynamics; artificial intelligence and machine learning; airborne communication and networking; group design project; individual research thesis.}
+        \resumeItem{Key Modules: Guidance and Navigation for Autonomous Systems; Sensor Fusion; UAS Dynamics and Control; UAS Modelling and Simulation; Autonomous Vehicle Control Systems; AI for Autonomous Systems; Aerial Communication Systems.}
       \resumeItemListEnd
     \resumeSubheading
-      {Universitat Politècnica de Catalunya}{Terrassa, Spain}
-      {MSc in Aeronautical Engineering}{Sep. 2025 -- Present}
+      {MSc in Aeronautical Engineering}{Sep 2025 -- Present}
+      {Universitat Politècnica de Catalunya (Terrassa, Spain)}{}
       \resumeItemListStart
-        \resumeItem{Grade: 88.3\% (60 ECTS completed; degree total 120 ECTS). Honours Distinction in Airport Design and Construction.}
-        \resumeItem{Coursework includes aerodynamics and flight mechanics, aircraft structures and FEM, propulsion, and aircraft systems.}
+        \resumeItem{Average Grade: 88.3\% (60 ECTS completed; 120 ECTS total).}
+        \resumeItem{Key Modules: Aerodynamics, Flight and Orbital Mechanics; Air Transport and Navigation Systems; Aerospace Vehicles; RF and Communication Systems; Aircraft and Rocket Propulsion Systems; Airport Design and Construction (Honours Distinction, 2026).}
       \resumeItemListEnd
     \resumeSubheading
-      {Universitat Politècnica de Catalunya}{Terrassa, Spain}
-      {BSc in Aerospace Technology Engineering}{Sep. 2021 -- Sep. 2025}
+      {BSc in Aerospace Technology Engineering}{Sep 2021 -- Sep 2025}
+      {Universitat Politècnica de Catalunya (Terrassa, Spain)}{}
       \resumeItemListStart
-        \resumeItem{Grade: 76.4\%.}
-        \resumeItem{Thesis: Study of yaw moment and stability control algorithm based on longitudinal torque distribution in electric vehicles.}
+        \resumeItem{Average Grade: 76.4\% (240 ECTS).}
+        \resumeItem{Key Modules: Automatic Control; Flight Mechanics; Avionics; Electronic Circuits; Computational Engineering; Aerodynamics; Aerospace Structures; Aerospace Propulsion; Space Engineering; Aircraft Design.}
+        \resumeItem{Bachelor's Thesis: Study of yaw moment and stability control algorithm based on longitudinal torque distribution in electric vehicles --- Grade: 100\% (Nominated for Honours Distinction).}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
 \section{Experience}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {CUPRA Racing}{Jan. 2025 -- Feb. 2026}
-      {Motorsport Electronics and Software Engineering Intern}{Abrera, Spain}
+      {Electronics and Embedded Software Engineering Intern}{Jan 2025 -- Feb 2026}
+      {CUPRA Racing (Abrera, Spain)}{}
+      \resumeIntro{Motorsport division of CUPRA, responsible for the development of high-performance racing vehicles, experimental prototype platforms, and advanced engineering R\&D projects.}
       \resumeItemListStart
-        \resumeItem{Contributed to the TCRHyb hybrid touring-car prototype, the Raval 4WD in-wheel-motor prototype, the CUPRA Exponential Experience and the TCR production race car.}
-        \resumeItem{Modelled, simulated and sized the electric powertrain cooling system on TCRHyb, and validated the model against test data.}
-        \resumeItem{Developed and calibrated yaw-control and torque-vectoring algorithms for active longitudinal and, where applicable, lateral torque distribution on TCRHyb and Raval 4WD, including on-track calibration. Undergraduate thesis.}
-        \resumeItem{Supported vehicle-control-unit software testing on the TCR car and implemented updates and new functionality.}
-        \resumeItem{Refactored the Gateway VCU source code on TCRHyb and validated the changes during track testing.}
-        \resumeItem{Set up data-acquisition instrumentation and logging configuration for TCRHyb and Raval 4WD track tests.}
-        \resumeItem{Tested software for the CUPRA Exponential Experience, including the multiplayer version, and provided technical support during events.}
+        \resumeItem{Built vehicle multi-physics simulation models in MATLAB/Simulink for the Touring Car Racing (TCR) prototype and its hybrid version, integrating non-linear tyre dynamics, suspension dynamics, and hybrid powertrain systems (ICE and electric motor).}
+        \resumeItem{Formulated and simulated closed-loop yaw stability control algorithms based on driving and braking torque distribution for TCR and Raval 4WD prototypes; tuned and benchmarked control laws during track testing to guarantee dynamic stability and maximum performance.}
+        \resumeItem{Refactored the complete Vehicle Control Unit (VCU) software architecture in Simulink for the TCR hybrid platform, optimising model execution, task scheduling, and real-time communication protocols.}
+        \resumeItem{Modelled, simulated, and sized the electric powertrain cooling system in MATLAB/Simulink, achieving high model fidelity correlated against empirical sensor data.}
+        \resumeItem{Configured data-acquisition systems, sensor instrumentation, and telemetry logging to monitor dynamic parameters and support real-time system diagnostics and performance tuning during prototype testing.}
       \resumeItemListEnd
 
     \resumeSubheading
-      {UPC ecoRacing (Formula Student)}{Nov. 2021 -- Sep. 2024}
-      {Vehicle Dynamics Engineer}{Terrassa, Spain}
+      {Vehicle Dynamics \& Control Engineer}{Nov 2021 -- Sep 2024}
+      {UPC ecoRacing (Formula Student) (Terrassa, Spain)}{}
+      \resumeIntro{Spain's pioneering and most awarded Formula Student engineering team, designing and manufacturing high-performance 4WD electric and autonomous (driverless) single-seater prototypes.}
       \resumeItemListStart
-        \resumeItem{Developed suspension kinematics and contributed to mechanical set-up optimisation.}
-        \resumeItem{Built tyre models and identified parameters in MATLAB to improve simulation accuracy.}
-        \resumeItem{Designed components from concept to manufacture: requirements, CAD, finite-element validation, technical drawings and supplier coordination.}
-        \resumeItem{Built vehicle simulation models in MATLAB to support design decisions and performance targets.}
-        \resumeItem{Ran track tests covering strain-gauge instrumentation, mechanical set-up, energy management, traction control and torque-vectoring calibration.}
-        \resumeItem{Contributed to vehicle-control-unit and electronics software, including small battery-management-unit changes in C.}
+        \resumeItem{Engineered a complete closed-loop torque vectoring algorithm for a 4WD electric prototype with four independent in-wheel motors, maximising cornering yaw response through torque distribution and conducting live-session parameter tuning.}
+        \resumeItem{Led the concept design phase for the 2025 prototype vehicle, coordinating multidisciplinary departments across vehicle dynamics, chassis, powertrain, and aerodynamics to converge on balanced vehicle targets.}
+        \resumeItem{Created non-linear vehicle dynamics simulation models in MATLAB and Python, integrating semi-empirical tyre models and parameter identification algorithms from test data to improve simulation accuracy and support concept and setup optimisation.}
+        \resumeItem{Served as Test and Validation Lead, planning and executing testing sessions to verify electronic control algorithms, streamline energy management, and validate mechanical setup and vehicle dynamics performance.}
+        \resumeItem{Modelled suspension components in CAD, assessed load cases, validated structural integrity via FEA, and conducted on-track testing using strain-gauge instrumentation to correlate dynamic stress distributions as well as the boundary conditions used.}
       \resumeItemListEnd
 
     \resumeSubheading
-      {UPC ecoRacing (Formula Student)}{Sep. 2023 -- Sep. 2024}
-      {Head of Logistics}{Terrassa, Spain}
-      \resumeItemListStart
-        \resumeItem{Led the logistics department during the 2023--2024 Formula Student season.}
-        \resumeItem{Organised team travel, transport and schedules.}
-        \resumeItem{Maintained the team inventory.}
-      \resumeItemListEnd
+      {Head of Logistics}{Sep 2023 -- Sep 2024}
+      {UPC ecoRacing (Formula Student) (Terrassa, Spain)}{}
+      \resumeIntro{Directed international team logistics and event operations, coordinating prototype and equipment transport, testing schedules, operational timelines, and inventory management across Formula Student competitions.}
   \resumeSubHeadingListEnd
 
-\section{Projects}
-  \resumeSubHeadingListStart
-    \resumeProjectHeading
-      {\textbf{Motorsport Telemetry \& Suspension Kinematics Suite} $|$ \emph{Python}}{Jul. 2026 -- Present}
-      \resumeItemListStart
-        \resumeItem{Modular motorsport engineering suite for data analysis and suspension kinematics.}
-        \resumeItem{Configurable telemetry import, lap and session analysis, reusable layouts and plots, maths channels, aliases, constants and multi-dataset comparison.}
-      \resumeItemListEnd
-    \resumeProjectHeading
-      {\textbf{Nutria} $|$ \emph{Tauri 2, React, TypeScript, SQLite; earlier Python/PySide6}}{Sep. 2024 -- Aug. 2026}
-      \resumeItemListStart
-        \resumeItem{Local-first macOS desktop application for nutrition professionals, taken from concept to a private pilot release.}
-        \resumeItem{Shipped an initial Python/PySide6 MVP, then rebuilt the product with Tauri 2, React, TypeScript and SQLite.}
-        \resumeItem{Patient and clinical-data management, nutrition calculations, progress tracking, bilingual food and recipe databases, menu planning, shopping lists and PDF export.}
-        \resumeItem{Release process with automated end-to-end tests, visual regression, accessibility checks and documentation.}
-      \resumeItemListEnd
-    \resumeProjectHeading
-      {\textbf{Classic Motorcycle Restoration} $|$ \emph{Puch Cobra 74cc}}{2018}
-      \resumeItemListStart
-        \resumeItem{Partial restoration of a classic Puch Cobra 74cc: mechanical inspection, disassembly and reassembly, and fault diagnosis.}
-      \resumeItemListEnd
-  \resumeSubHeadingListEnd
-
-\section{Seminars}
+\section{Technical Projects}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {Optimum G}{Nov. 2024}
-      {Applied Vehicle Dynamics Seminar, 48 hours}{Stuttgart, Germany}
+      {Vehicle Dynamics \& Telemetry Analysis Suite}{Jul 2026 -- Present}
+      {System Architecture \& AI-Assisted Development}{}
       \resumeItemListStart
-        \resumeItem{Vehicle-dynamics fundamentals, tyre testing and modelling, steady-state and transient behaviour, weight transfer, aerodynamics, kinematics and compliance (K\&C), and simulation validated with track testing.}
+        \resumeItem{Defining the system architecture and engineering logic for a modular desktop software suite focused on telemetry data analysis and suspension kinematics evaluation.}
+        \resumeItem{Directing development through structured AI-agent workflows to implement data import pipelines, session comparison tools, custom mathematical channels, and visualisation layouts with minimal manual coding effort.}
       \resumeItemListEnd
     \resumeSubheading
-      {Optimum G}{Nov. 2024}
-      {Data-Driven Performance Engineering Seminar, 48 hours}{Stuttgart, Germany}
+      {Nutria (Desktop Clinical Management Platform)}{Sep 2024 -- Aug 2026}
+      {Python, Product Design \& AI Workflows}{}
       \resumeItemListStart
-        \resumeItem{Data-acquisition hardware and software, driver and vehicle data analysis, and practical trackside performance engineering.}
+        \resumeItem{Programmed the initial functional prototypes in Python and subsequently led the product architecture and system redesign from concept to a private pilot release (Release 1).}
+        \resumeItem{Designed and orchestrated AI-driven engineering workflows, structuring system requirements, modular architecture, and automated End-to-End testing to implement features with minimal human intervention and minimum iterations.}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
-\section{Honours and Awards}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Institut Alt Penedès}{Jun. 2021}
-      {High School Honours Distinction}{Vilafranca del Penedès, Spain}
-      \resumeItemListStart
-        \resumeItem{Matrícula de Honor awarded to the strongest academic records of the graduating class.}
-      \resumeItemListEnd
-    \resumeSubheading
-      {Universitat Politècnica de Catalunya}{MSc Aeronautical Engineering}
-      {Honours Distinction in Airport Design and Construction}{Terrassa, Spain}
-  \resumeSubHeadingListEnd
-
-\section{Technical Skills}
+\section{Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages \& Scripting}{: MATLAB, Simulink, C, C++, Python, LaTeX} \\
-     \textbf{Engineering \& Simulation Software}{: ANSA (basics), MSC Nastran, CAD, MoTeC, WinTAX4, Sysma} \\
-     \textbf{Developer Tools}{: Git, GitHub, VS Code} \\
-     \textbf{Languages}{: Catalan (Native), Spanish (Native), English (C2; listening C2, reading C1, spoken production C1, spoken interaction C1, writing C1), German (A1)}
+     \textbf{Programming:} MATLAB, Simulink, C, C++, Python, LaTeX. \\
+     \textbf{Engineering, Simulation \& Telemetry:} SolidWorks, CATIA, FreeCAD, MSC Nastran, ANSA, MoTeC, WinTAX4, Sysma. \\
+     \textbf{Agentic-AI \& Developer Tools:} Cursor, Antigravity, Claude Code, Git, GitHub, VS Code. \\
+     \textbf{Languages:} Catalan (Native), Spanish (Native), English (C2 Proficient), German (A1 Basic).
+    }}
+ \end{itemize}
+
+\section{Training}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Applied Vehicle Dynamics Seminar} --- Optimum G (Stuttgart, Germany $|$ Nov 2024, 48 hours): Intensive training on non-linear tyre modelling, steady-state and transient dynamics, load transfer, kinematics and compliance (K\&C), and track simulation validation. \\
+     \vspace{1pt}
+     \textbf{Data-Driven Performance Engineering Seminar} --- Optimum G (Stuttgart, Germany $|$ Nov 2024, 48 hours): Practical seminar on data-acquisition hardware/software, sensor analysis, track testing methodologies, and data-driven engineering decision-making.
     }}
  \end{itemize}
 
