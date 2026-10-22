@@ -6,7 +6,7 @@ $out_dir = '';
 $emulate_aux = 1;
 
 my $src = join ' ', @ARGV;
-if ($src =~ /marti_ferran_gonzales_cv/) {
+if ($src =~ /marti_ferran_gonzales_cv|cover_letter/) {
     $pdf_mode = 4; # lualatex: Calibri is loaded with fontspec
 } else {
     $pdf_mode = 1; # pdflatex

@@ -1,9 +1,13 @@
 % !TEX root = cover_letter.tex
-% Same layout as the CV. Compile this file.
+% Same type and engine as the CV. Compile this file with latexmk.
 % Edit the application block, then retarget the opening sentence if the role changes.
 
 \documentclass[a4paper,11pt]{article}
+\newcommand{\cvsetupfont}{\setsansfont{Calibri}}
 \input{preamble}
+
+\usepackage{geometry}
+\geometry{a4paper, margin=20mm, noheadfoot}
 
 % ---------- Application ----------
 \newcommand{\letterdate}{21 October 2026}
@@ -15,50 +19,52 @@
 \newcommand{\availability}{September 2027}
 % ---------------------------------
 
-% Letter only. The CV keeps the margins from preamble (about 0.5in).
-\addtolength{\oddsidemargin}{0.25in}
-\addtolength{\evensidemargin}{0.25in}
-\addtolength{\textwidth}{-0.5in}
-\addtolength{\topmargin}{0.25in}
-\addtolength{\textheight}{-0.5in}
+\newcommand{\letterline}[1]{%
+  \edef\letterlinetmp{#1}%
+  \ifx\letterlinetmp\empty\else
+    \letterlinetmp\par
+  \fi
+}
+\newcommand{\lettersep}{ -- }
 
+\pagestyle{empty}
+\raggedright
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
-\linespread{1.15}
-\rightskip=0pt
-\parfillskip=0pt plus 1fil
-\emergencystretch=2em
+\linespread{1.05}
 \hyphenation{MATLAB Simulink}
 
 \begin{document}
 
-\begin{center}
-    \textbf{\Huge \scshape Martí Ferran Gonzales} \\ \vspace{1pt}
-    \small Barcelona, Spain $|$ +44 5673 224450 $|$
-    \href{mailto:marti.ferran@icloud.com}{\underline{marti.ferran@icloud.com}} $|$
-    \href{https://www.linkedin.com/in/mart\%C3\%AD-ferran-gonzales-080348229}{\underline{linkedin.com/in/martí-ferran-gonzales}}
-\end{center}
+{\centering
+\textbf{\Huge MARTÍ FERRAN GONZALES}\par
+\vspace{1pt}
+{\fontsize{10}{12}\selectfont
+Barcelona, Spain\par
+\vspace{1pt}
++44 5673 224450\lettersep\href{mailto:marti.ferran@icloud.com}{marti.ferran@icloud.com}\lettersep\href{https://www.linkedin.com/in/mart\%C3\%AD-ferran-gonzales-080348229}{linkedin.com/in/martí-ferran-gonzales}\par
+}
+\vspace{4pt}
+}
+\nointerlineskip
+\rule{\textwidth}{0.4pt}\par
+\vspace{10pt}
+\nointerlineskip
 
-\vspace{-4pt}
-\hrule height 0.4pt
-\vspace{11pt}
-
-{\small \letterdate\par}
-
-\vspace{12pt}
-{\small
-\recipientname\\
-\recipientrole\\
-\company\\
-\companycity\par}
-
-\vspace{12pt}
-\textbf{Subject: Application for \rolename}
-
-\vspace{12pt}
-Dear \recipientname,
-
-\setlength{\parskip}{10pt}
+\letterdate\par
+\vspace{10pt}
+\nointerlineskip
+\letterline{\recipientname}
+\letterline{\recipientrole}
+\letterline{\company}
+\letterline{\companycity}
+\vspace{10pt}
+\nointerlineskip
+\textbf{Subject: Application for \rolename}\par
+\vspace{10pt}
+\nointerlineskip
+Dear \recipientname,\par
+\setlength{\parskip}{8pt}
 
 A prototype is the only review that matters for a vehicle controller. Motorsport gave me that review on a short cycle: a nonlinear model, a real-time implementation, and a lap that confirms or kills the law before the day is over. That is the work I want to do at \company: guidance, estimation and control that have to stand up on the vehicle, not only in the model.
 
@@ -68,10 +74,10 @@ The controller was not finished in simulation. I refactored the Vehicle Control 
 
 I am a Spanish national. The Cranfield degree runs until August 2027, in parallel with the UPC MSc in Aeronautical Engineering (88.3\% on the 60 ECTS completed). I am available to start in \availability. The conversation worth having is a technical one: the yaw allocation, the VCU task schedule, and the sessions that confirmed both. I can bring the model structure and the track data.
 
-\vspace{4pt}
-Yours sincerely,
-
-\vspace{3.5\baselineskip}
+Yours sincerely,\par
+\setlength{\parskip}{0pt}
+\vspace{12pt}
+\nointerlineskip
 \textbf{Martí Ferran Gonzales}
 
 \end{document}
