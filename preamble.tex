@@ -1,11 +1,18 @@
-% Shared layout for short.tex and long.tex.
+% Shared layout for marti_ferran_gonzales_cv.tex and cover_letter.tex.
+% The CV defines \cvsetupfont before \input{preamble}.
 % Author : Jake Gutierrez
 % Based off of: https://github.com/sb2nov/resume
 % License : MIT
-% This file is not a document. Compile short.tex or long.tex.
+% This file is not a document. Compile marti_ferran_gonzales_cv.tex or cover_letter.tex.
 
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
+\ifdefined\cvsetupfont
+  \usepackage{fontspec}
+  \cvsetupfont
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\fi
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
@@ -17,7 +24,10 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
-\input{glyphtounicode}
+\ifdefined\cvsetupfont
+\else
+  \input{glyphtounicode}
+\fi
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -38,13 +48,18 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Sections formatting
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-
-% Ensure that generate pdf is machine readable/ATS parsable
-\pdfgentounicode=1
+% Sans faces here have no small caps, so the section title stays in the same font.
+\ifdefined\cvsetupfont
+  \titleformat{\section}{
+    \vspace{-4pt}\raggedright\large
+  }{}{0em}{\MakeUppercase}[\color{black}\titlerule \vspace{-5pt}]
+\else
+  \titleformat{\section}{
+    \vspace{-4pt}\scshape\raggedright\large
+  }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+  % Ensure that the generated pdf is machine readable/ATS parsable
+  \pdfgentounicode=1
+\fi
 
 %-------------------------
 % Custom commands
@@ -84,3 +99,7 @@
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+% Role context under a \resumeSubheading. The heading table is top-aligned and
+% pulls the next line up, so the blurb must start a new paragraph below it.
+\newcommand{\resumeIntro}[1]{\par\vspace{3pt}{\small #1\par}}
