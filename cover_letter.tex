@@ -1,0 +1,77 @@
+% !TEX root = cover_letter.tex
+% Same layout as the CV. Compile this file.
+% Edit the application block, then retarget the opening sentence if the role changes.
+
+\documentclass[a4paper,11pt]{article}
+\input{preamble}
+
+% ---------- Application ----------
+\newcommand{\letterdate}{21 October 2026}
+\newcommand{\recipientname}{Hiring Manager}
+\newcommand{\recipientrole}{Talent Acquisition}
+\newcommand{\company}{Company Name}
+\newcommand{\companycity}{City, Country}
+\newcommand{\rolename}{Guidance, Navigation and Control Engineer}
+\newcommand{\availability}{September 2027}
+% ---------------------------------
+
+% Letter only. The CV keeps the margins from preamble (about 0.5in).
+\addtolength{\oddsidemargin}{0.25in}
+\addtolength{\evensidemargin}{0.25in}
+\addtolength{\textwidth}{-0.5in}
+\addtolength{\topmargin}{0.25in}
+\addtolength{\textheight}{-0.5in}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\linespread{1.15}
+\rightskip=0pt
+\parfillskip=0pt plus 1fil
+\emergencystretch=2em
+\hyphenation{MATLAB Simulink}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape Martí Ferran Gonzales} \\ \vspace{1pt}
+    \small Barcelona, Spain $|$ +44 5673 224450 $|$
+    \href{mailto:marti.ferran@icloud.com}{\underline{marti.ferran@icloud.com}} $|$
+    \href{https://www.linkedin.com/in/mart\%C3\%AD-ferran-gonzales-080348229}{\underline{linkedin.com/in/martí-ferran-gonzales}}
+\end{center}
+
+\vspace{-4pt}
+\hrule height 0.4pt
+\vspace{11pt}
+
+{\small \letterdate\par}
+
+\vspace{12pt}
+{\small
+\recipientname\\
+\recipientrole\\
+\company\\
+\companycity\par}
+
+\vspace{12pt}
+\textbf{Subject: Application for \rolename}
+
+\vspace{12pt}
+Dear \recipientname,
+
+\setlength{\parskip}{10pt}
+
+A prototype is the only review that matters for a vehicle controller. Motorsport gave me that review on a short cycle: a nonlinear model, a real-time implementation, and a lap that confirms or kills the law before the day is over. That is the work I want to do at \company: guidance, estimation and control that have to stand up on the vehicle, not only in the model.
+
+At CUPRA Racing I built the multi-physics plant of the TCR hybrid and the Raval 4WD prototype in MATLAB and Simulink: nonlinear tyres, suspension, and a hybrid powertrain with the engine and the electric motor in one model. On that plant I wrote the closed-loop yaw controller that allocates drive and brake torque, and I calibrated it on the car against the measured yaw response. The bachelor's thesis that defines the allocation was graded 100\% and nominated for Honours Distinction. The Cranfield MSc in Autonomous Vehicle Dynamics and Control, which I started in September 2026, is the estimation and robustness layer on the same problem: sensor fusion for GNSS/INS integration, including extended and unscented Kalman filters, guidance and navigation, and classical, state-space and robust control.
+
+The controller was not finished in simulation. I refactored the Vehicle Control Unit of the TCR hybrid in Simulink so the law ran as scheduled embedded software: execution order, task rates, and the real-time path through the gateway VCU on the vehicle CAN bus. I validated that refactor in track testing. I also sized the electric powertrain cooling system and correlated the thermal model to the logged sensors. The session data came from the stack I configured for those tests, MoTeC for acquisition and WinTAX4 for the analysis, following the OptimumG data-driven performance seminar. UPC ecoRacing was the same loop on a Formula Student car with four independent in-wheel motors: the torque-vectoring law, the test sessions I led, and strain-gauge measurements to check that the loads in the model were the loads in the part.
+
+I am a Spanish national. The Cranfield degree runs until August 2027, in parallel with the UPC MSc in Aeronautical Engineering (88.3\% on the 60 ECTS completed). I am available to start in \availability. The conversation worth having is a technical one: the yaw allocation, the VCU task schedule, and the sessions that confirmed both. I can bring the model structure and the track data.
+
+\vspace{4pt}
+Yours sincerely,
+
+\vspace{3.5\baselineskip}
+\textbf{Martí Ferran Gonzales}
+
+\end{document}
