@@ -16,10 +16,10 @@
   July\or August\or September\or October\or November\or December\fi
   \ \number\year}
 \newcommand{\recipientname}{Hiring Manager}
-\newcommand{\recipientrole}{Talent Acquisition}
-\newcommand{\company}{Company Name}
-\newcommand{\companycity}{City, Country}
-\newcommand{\rolename}{Guidance, Navigation and Control Engineer}
+% \newcommand{\recipientrole}{Talent Acquisition}
+\newcommand{\company}{Audi Revolut F1 Team}
+\newcommand{\companycity}{Hinwil, Switzerland}
+\newcommand{\rolename}{Technical Graduate Simulator Development}
 \newcommand{\availability}{September 2027}
 % ---------------------------------
 
@@ -68,15 +68,19 @@ Cranfield, United Kingdom -- Barcelona, Spain\par
 Dear \recipientname,\par
 \setlength{\parskip}{8pt}
 
-A prototype is the only review that matters for a vehicle controller. Motorsport gave me that review on a short cycle: a nonlinear model, a real-time implementation, and a lap that confirms or kills the law before the day is over. That is the work I want to do at \company: guidance, estimation and control that have to stand up on the vehicle, not only in the model.
+My experience in Formula Student and at CUPRA Racing has helped me identify the engineering work I enjoy most: translating physical behaviour into numerical models and understanding how well those models represent the real vehicle. I am applying to the \company\hspace{1mm}Graduate Programme with Simulator Development as my first preference and Off-Car Systems as my second, bringing experience in vehicle modelling, embedded control and track testing.
 
-At CUPRA Racing I built the multi-physics plant of the TCR hybrid and the Raval 4WD prototype in MATLAB and Simulink: nonlinear tyres, suspension, and a hybrid powertrain with the engine and the electric motor in one model. On that plant I wrote the closed-loop yaw controller that allocates drive and brake torque, and I calibrated it on the car against the measured yaw response. The bachelor's thesis that defines the allocation was graded 100\% and nominated for Honours Distinction. The Cranfield MSc in Autonomous Vehicle Dynamics and Control, which I started in September 2026, is the estimation and robustness layer on the same problem: sensor fusion for GNSS/INS integration, including extended and unscented Kalman filters, guidance and navigation, and classical, state-space and robust control.
+At CUPRA Racing, I developed a two-track vehicle dynamics model from scratch in MATLAB/Simulink as part of my bachelor’s thesis, using it to support yaw control development before vehicle testing. I compared its response with track data, achieving good agreement in steady-state manoeuvres while recognising the need for further validation under transient conditions. Independently, I also developed a similar model in Python. In Formula Student, I used point-mass lap-time simulation and improved the parametrisation linking yaw moment diagrams to the simulator’s vehicle acceleration limits. These projects strengthened my interest in vehicles modelling and taught me to asses the assumptions and conditions that determine how confidently simulation results can support engineering decisions.
 
-The controller was not finished in simulation. I refactored the Vehicle Control Unit of the TCR hybrid in Simulink so the law ran as scheduled embedded software: execution order, task rates, and the real-time path through the gateway VCU on the vehicle CAN bus. I validated that refactor in track testing. I also sized the electric powertrain cooling system and correlated the thermal model to the logged sensors. The session data came from the stack I configured for those tests, MoTeC for acquisition and WinTAX4 for the analysis, following the OptimumG data-driven performance seminar. UPC ecoRacing was the same loop on a Formula Student car with four independent in-wheel motors: the torque-vectoring law, the test sessions I led, and strain-gauge measurements to check that the loads in the model were the loads in the part.
+I now want to build on that foundation in a driver-in-the-loop environment, learning how vehicle models, motion cueing and driver feedback are integrated into a useful engineering tool. My current MSc in Autonomous Vehicle Dynamics and Control at Cranfield, alongside my MSc in Aeronautical Engineering at UPC, is extending my knowledge of dynamic systems and control. I would welcome the opportunity to apply that knowledge to simulator development, testing and system integration.
 
-I am a Spanish national. The Cranfield degree runs until August 2027, in parallel with the UPC MSc in Aeronautical Engineering (88.3\% on the 60 ECTS completed). I am available to start in \availability. The conversation worth having is a technical one: the yaw allocation, the VCU task schedule, and the sessions that confirmed both. I can bring the model structure and the track data.
+My interest in Off-Car Systems comes from working with the data and tools that support vehicle development. After using MATLAB and Python for Formula Student data analysis, and WinTAX at CUPRA, I began developing my own desktop acquisition application with AI coding agents. I defined the product requirements and interface, directed development and tested the resulting workflows. The first release supports WinTAX data import, data download from the team’s Vector logger and acquisition-table configuration. I have tested it with recorded data and the physical logger; one Formula Student team member is currently evaluating it before a wider rollout. This has given me practical experience of turning an engineering need into a tool and improving it through user feedback.
 
-Yours sincerely,\par
+Audi also has a direct connection to my previous work: at CUPRA Racing, I modified Audi TCR gateway and dashboard software to support updated power-steering maps. Contributing to Audi’s Formula 1 programme would allow me to build on that experience while developing in the areas that most interest me: simulation, vehicle dynamics and engineering software.
+
+I would welcome the opportunity to discuss my projects and how I could contribute to the team.
+
+Yours faithfully,\par
 \setlength{\parskip}{0pt}
 \vspace{12pt}
 \nointerlineskip
